@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+ <tiles-definitions>
+
+    <!-- Master -->
+    <definition name="master.page" template="/public/template/master.jsp">
+        <put-attribute name="header" value="/public/template/header.jsp"/>
+        <put-attribute name="sidebar" value="/public/template/sidebar.jsp"/>
+        <put-attribute name="footer" value="/public/template/footer.jsp"/>
+    </definition>
+    <!--  Pages -->
+    <definition name="welcomePage" extends="master.page">
+        <put-attribute name="body" value="/protected/welcomePage.jsp"/>
+    </definition>
+    <!-- <definition name="contactsList" extends="master.page">
+        <put-attribute name="body" value="/protected/contacts/contacts.jsp"/>
+    </definition>-->
+    <definition name="login" extends="master.page">
+        <put-attribute name="header" value=""/>
+        <put-attribute name="sidebar" value=""/>
+        <put-attribute name="footer" value=""/>
+        <put-attribute name="body" value="/public/login.jsp"/>
+    </definition>
+     <!-- 
+    <definition name="accessMenu" extends="master.page">
+        <put-attribute name="body" value="/protected/master/accessMenu.jsp"/>
+    </definition>
+    <definition name="addAccessMenu" extends="master.page">
+        <put-attribute name="body" value="/protected/master/loadaddMenu.jsp"/>
+    </definition>
+    <definition name="denied" extends="master.page">
+        <put-attribute name="body" value="/public/denied.jsp"/>
+    </definition>
+    <definition name="billersList" extends="master.page">
+         <put-attribute name="body" value="/protected/master/billers.jsp"/>
+    </definition> -->
+    <definition name="usersList" extends="master.page">
+         <put-attribute name="body" value="/protected/master/user.jsp"/>
+    </definition>   
+    <definition name="developersList" extends="master.page">
+         <put-attribute name="body" value="/protected/master/developer.jsp"/>
+    </definition>
+    <definition name="proyeksList" extends="master.page">
+         <put-attribute name="body" value="/protected/master/proyek.jsp"/>
+    </definition>
+    <definition name="rumahsList" extends="master.page">
+         <put-attribute name="body" value="/protected/master/rumah.jsp"/>
+    </definition>
+    <definition name="konsumensList" extends="master.page">
+         <put-attribute name="body" value="/protected/master/konsumen.jsp"/>
+    </definition>
+    <definition name="transaksisList" extends="master.page">
+         <put-attribute name="body" value="/protected/proses/transaksi.jsp"/>
+    </definition>
+    <definition name="bayarAngsuransList" extends="master.page">
+         <put-attribute name="body" value="/protected/proses/pembayaran.jsp"/>
+    </definition> 
+    <definition name="bayarDPsList" extends="master.page">
+         <put-attribute name="body" value="/protected/proses/pembayaran_dp.jsp"/>
+    </definition> 
+    <definition name="piutangsList" extends="master.page">
+         <put-attribute name="body" value="/protected/laporan/rekap_piutang.jsp"/>
+    </definition>    
+    <definition name="pencariansList" extends="master.page">
+         <put-attribute name="body" value="/protected/laporan/pencarian.jsp"/>
+    </definition>    
+</tiles-definitions>
